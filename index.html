@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Pumpkin Calculator <button onclick="aboutDisplayFunction()">About</button></h3>
+
+<p style="font-size:80%;" id="aboutDisplay"></p>  
+
+
+<p>Number of Pumpkins</p>
+
+<input type="number" id="pump" value="0">
+<button onclick="pumpFunction()">Calculate Pumpkins</button>
+<p id="pumpDisplay"></p>
+
+
+<p>Number of Stacks of Pumpkins</p>
+
+<input type="number" id="pumpStack" value="0">
+<button onclick="pumpStackFunction();pumpStackOriginalFunction()">Calculate Stacks</button>
+<p id="pumpStackDisplay"></p>
+
+
+<!Pumpkin Fuction>
+<script>
+function pumpFunction() {
+    var pumpCalc = document.getElementById("pump").value;
+    document.getElementById("pumpDisplay").innerHTML = "$" + pumpCalc * 23;
+}
+</script>
+
+<!Pumpkin Stack Calculated Display Function>
+<script>
+function pumpStackFunction() {
+    var pumpStackCalc = document.getElementById("pumpStack").value;
+    document.getElementById("pumpStackDisplay").innerHTML = "$" + pumpStackCalc * 23 * 64;
+}
+</script>
+
+<!About Display Function>
+<script>
+function aboutDisplayFunction() {
+    document.getElementById("aboutDisplay").innerHTML = "Pumpkin Pies can be sold at /warp Shop for $30 each. Pumpkin Pies require 1 Sugar, 1 Egg, and 1 Pumpkin. A Sugar can be bought at the Shop for $5 and an Egg can be bought for $2. This means Pumpkin = $30 - $5 - $2 and a Pumpkin Stack = Pumpkin * 64. You can always just multiply your Pumpkins by $23 to find their value, but in case you can't remember that number, here's a handy calculator. Created by KeithDavisRatio.";
+}
+</script>
+
+
+</body>
+</html>
